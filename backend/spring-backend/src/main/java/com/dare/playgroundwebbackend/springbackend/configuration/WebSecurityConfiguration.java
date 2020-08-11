@@ -37,6 +37,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
             .successHandler(loginSuccessHandler)
             .failureHandler(new SimpleUrlAuthenticationFailureHandler());
         http.csrf().ignoringAntMatchers("/api/login").csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+        http.csrf().disable();
     }
 
     @Bean
