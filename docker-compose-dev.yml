@@ -5,4 +5,4 @@ services:
     environment:
       MONGO_INITDB_DATABASE: playground-web
     ports:
-      - 27017:27017
+      - 27017:27017 
